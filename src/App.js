@@ -3,6 +3,8 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import { Routes, Route, Link } from "react-router-dom";
 import Reviews from './Components/Reviews/Reviews';
+import Blogs from './Components/Blogs/Blogs';
+import ErrorAlert from './Components/ErrorAlert/ErrorAlert';
 
 function App() {
   return (
@@ -11,8 +13,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="review" element={<Reviews />} />
+        <Route path="blogs" element={<Blogs />} />
         <Route path="dashboard" element={<Reviews />} />
-        <Route path="blogs" element={<Reviews />} />
+        <Route path="*" element={<ErrorAlert />} />
       </Routes>
     </div>
   );
