@@ -1,8 +1,11 @@
 import React from 'react';
 import './Home.css';
 import product from '../../images/product.png'
+import useReview from '../CustomHooks/useReview';
+import Review from '../Review/Review';
 
 const Home = () => {
+    const [reviews, setReviews] = useReview();
     return (
         <div>
             <div className='product'>
@@ -13,6 +16,22 @@ const Home = () => {
                 </div>
                 <div className='product-image'>
                     <img src={product} alt="" />
+                </div>
+            </div>
+            <div className="review-part">
+                <div className='review-head'>
+                    <h2>Review</h2>
+                </div>
+                <div className='review-content'>
+                    {
+                        reviews.map(review => <Review 
+                            key={review.id}
+                            review={review}
+                        ></Review>)
+                    }
+                </div>
+                <div className='review-button'>
+                    <a href="/review">See All Reviews</a>
                 </div>
             </div>
         </div>
