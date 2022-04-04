@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Reviews from './Components/Reviews/Reviews';
 import Blogs from './Components/Blogs/Blogs';
 import ErrorAlert from './Components/ErrorAlert/ErrorAlert';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="review" element={<Reviews />} />
         <Route path="blogs" element={<Blogs />} />
-        <Route path="dashboard" element={<Reviews />} />
+        <Route path="dashboard" element={<Dashboard />} />
         <Route path="*" element={<ErrorAlert />} />
       </Routes>
     </div>

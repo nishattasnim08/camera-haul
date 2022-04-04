@@ -1,0 +1,7 @@
+.chart-part{
+    display: flex;
+    width: 90%;
+}
+.chart-component{
+    margin: 20px;
+}
